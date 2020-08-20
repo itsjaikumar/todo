@@ -1,0 +1,18 @@
+<link rel="stylesheet" 
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+crossorigin="anonymous">
+<style>
+.submit{
+    background-color: #6BA3E8;
+}
+</style>
+
+<p><h3>Are you sure want to delete '{{item}}' task</h3></p>
+
+<a href="{% url 'index' %}"><h5>Cancel</h5></a>
+
+<form method = 'POST' action="">
+    {% csrf_token %}
+    <input class='btn btn-info' type="submit" name="Delete">
+</form>
